@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar">
         <Link to="/">Home</Link>
-        <Link to="/pagina1">Página 1</Link>
+        <Link to="/taverna">Taverna Periódica</Link>
         <Link to="/pagina2">Página II</Link>
         <Link to="/pagina3">Página três</Link>
     </nav>
