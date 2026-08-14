@@ -5,8 +5,7 @@ function Navbar() {
     <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/taverna">Taverna Periódica</Link>
-        <Link to="/pagina2">Página II</Link>
-        <Link to="/pagina3">Página três</Link>
+        <Link to="/cereal">Cereal Killer</Link>
     </nav>
   )
 }
