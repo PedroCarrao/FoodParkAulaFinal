@@ -8,15 +8,58 @@ export const GlobalContextProvider = ({children}) => {
     let pontos = 1234
     const[carrinho, setCarrinho] = useState([
         {
-            nome: 'Nescau batizado com açucar',
+            produto: {
+                id: 1000,
+                nome: 'Nescau batizado com açucar',
+                preco: 10
+            },
             quantidade: 1,
-            preco: 10
+            id: 5555
         }
     ])
+    const[cardapioTaverna, setCardapioTaverna] = useState([
+        {
+            id: 0,
+            nome: 'Coca zero com mentos',
+            preco: 25,
+        },
+        {
+            id: 1,
+            nome: 'Vinagre com limão',
+            preco: 5,
+        },
+        {
+            id: 2,
+            nome: 'Pepsi Twist',
+            preco: 3,
+        },
+    ])
+
+
+    function adicionarAoCarrinho(id, restaurante){
+        // console.log(carrinho);
+        // console.log(id);
+        
+        if(restaurante == 'taverna'){
+            let novoProduto = cardapioTaverna.find( p => p.id == id)
+            console.log(novoProduto);
+
+            setCarrinho([...carrinho, {
+                produto: novoProduto,
+                quantidade: 1,
+                id: Date.now()
+            }])  
+        }
+
+        console.log(carrinho);
+        
+        
+    }
+
 
     return(
         <GlobalContext.Provider value={{
-                usuario, setUsuario, pontos, carrinho, setCarrinho
+                usuario, setUsuario, pontos, carrinho, setCarrinho, cardapioTaverna, adicionarAoCarrinho
             }}>
             {children}
         </GlobalContext.Provider>

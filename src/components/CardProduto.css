@@ -1,0 +1,14 @@
+.cont-cardproduto{
+    /* background-color: blue; */
+    box-shadow: 0 0 5px #00000088;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 150px;
+
+    border-top: 5px solid brown;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
