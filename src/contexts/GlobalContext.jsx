@@ -1,8 +1,10 @@
-import { createContext, useState} from "react";
+import { createContext, useEffect, useState} from "react";
 
 export const GlobalContext = createContext()
 
 export const GlobalContextProvider = ({children}) => {
+
+
 // aqui cria as infos salvas no contexto
     const[usuario, setUsuario] = useState("Dona Bete")
     let pontos = 1234
@@ -35,6 +37,14 @@ export const GlobalContextProvider = ({children}) => {
         },
     ])
 
+    useEffect( () => {
+        console.log(carrinho);
+    } ,[carrinho])
+
+    // forma mais comum de usar o useEffect, para buscar dados em uma api ao carregar a página
+    // useEffect(() => {
+    //     // get na api de dados
+    // }, [])
 
     function adicionarAoCarrinho(id, restaurante){
         // console.log(carrinho);
@@ -52,7 +62,6 @@ export const GlobalContextProvider = ({children}) => {
         }
 
         console.log(carrinho);
-        
         
     }
 
