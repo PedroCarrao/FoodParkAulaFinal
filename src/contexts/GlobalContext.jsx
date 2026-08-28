@@ -8,17 +8,7 @@ export const GlobalContextProvider = ({children}) => {
 // aqui cria as infos salvas no contexto
     const[usuario, setUsuario] = useState("Dona Bete")
     let pontos = 1234
-    const[carrinho, setCarrinho] = useState([
-        {
-            produto: {
-                id: 1000,
-                nome: 'Nescau batizado com açucar',
-                preco: 10
-            },
-            quantidade: 1,
-            id: 5555
-        }
-    ])
+    const[carrinho, setCarrinho] = useState([])
     const[cardapioTaverna, setCardapioTaverna] = useState([
         {
             id: 0,

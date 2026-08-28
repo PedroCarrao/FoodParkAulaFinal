@@ -4,6 +4,7 @@
     box-shadow: 0 0 10px #000;
 }
 
+
 .container-home, 
 .cont-taverna, 
 .cont-cereal, 
@@ -15,6 +16,8 @@
     gap: 25px;
 
     padding: 0 25px;
+
+    /* min-height: calc(100vh-70px); */
 
     
 }
