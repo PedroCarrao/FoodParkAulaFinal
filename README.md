@@ -9,13 +9,5 @@
 
 ## estrutura do item no carrinho:
 ```
-        {
-            produto: {
-                id: 1000,
-                nome: 'Nescau batizado com açucar',
-                preco: 10
-            },
-            quantidade: 1,
-            id: 5555
-        }
+
 ```
