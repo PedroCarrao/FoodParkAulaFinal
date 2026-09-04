@@ -22,7 +22,11 @@ app.use(express.json());
 app.get('/produtos', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM produtos');
-        res.json(result.rows);
+        let convertido = result.rows.map(p => ({
+            ...p,
+            preco: Number(p.preco)
+        }))
+        res.json(convertido);
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ error: 'Erro ao buscar produtos' });
